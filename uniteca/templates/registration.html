@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Uniteca</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../static/css/registration.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<script src="../static/js/registration.js"></script>
+	<script src="https://kit.fontawesome.com/d1ade3afc2.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="container" id="bodycontainer">
+		<div class="row">
+			<div class="col-md-12 col-xs-12 text-center">
+
+				<h1 class="text">Create your Account</h1>
+
+			</div>
+
+			<div class="col-md-12 col-xs-12 text-center">
+				<p class="p0">One account is all you need to access all Uniteca services.</p>
+				<p class="p1">Already you have an account? <a href="/">Sign-in.</a></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<form name="regis" method="post" action="/registration/">
+					<table style="max-width:550px;width:100%;border:0" cellpadding="8" cellspacing="0">
+						<tr>
+							<td>
+								<label for="Name">Name*:</label>
+								</td>
+							<td>
+								<input name="Name" id="Name" type="text" placeholder="Name..." maxlength="60"
+								style="max-width:250px;width:100%" />
+							</td>
+						</tr>
+			</form>
+
+						<tr>
+							<td>
+								<label for="Surname">Surname*:</label>
+							</td>
+							<td>
+								<input name="Surname" id="Surname" type="text" placeholder="Surname..." maxlength="60"
+								style="max-width:250px;width:100%" />
+							</td>
+							</tr>
+
+						<tr>
+							<td>
+								<label for="FromEmailAddress">Email*:</label>
+							</td>
+							<td>
+								<input name="FromEmailAddress" id="FromEmailAddress" type="text"
+								placeholder="Institutional email..." maxlength="90" style="max-width:250px;width:100%" />
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<label for="Password">Password*:</label>
+							</td>
+							<td>
+								<input name="Password" id="Password" type="password" placeholder="Password..." maxlength="60"
+								style="max-width:250px;width:100%" />
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<label for="Password">Confirm Password*:</label>
+							</td>
+							<td>
+								<input name="ConfirmPassword" id="ConfirmPassword" type="password" placeholder="Confirm Password..."
+								maxlength="60" style="max-width:250px;width:100%" />
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+							</td>
+							<td>
+								<input name="skip_Submit" type="submit" value="Submit" onclick="succesful" />
+							</td>
+						</tr>
+					</table>
+		</div>
+
+		<div class="container container_submit">
+			{% if error == 1%}
+			<p class="errorLogin">Email già presente!</p>
+			{% endif %}
+
+			{% if error == 2%}
+			<p class="errorLogin">Le password non coincidono!</p>
+			{% endif %}
+
+			{% if error == 3%}
+			<p class="errorLogin">Registrarsi con una delle email istituzionali: (@studenti.universita.it)!</p>
+			{% endif %}
+
+		</div>
+		<div class="container container_submit">
+			{% if succ == 1%}
+			<p class="succreg">Registrazione effettuata!</p>
+			{% endif %}
+		</div>
+
+	</div>
+	<script src="../static/js/JQuery.js"></script>
+</body>
+
+</html>
