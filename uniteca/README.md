@@ -21,8 +21,7 @@ Students will be able to access the app with the possibility of reserving a plac
 4. Go to project folder and install requirements by requirements.txt file: **> pip install -r requirements.txt**;
 5. Make sure the python interpreter is configured correctly;
 6. Install MongoDB for your operating system;
-7. If you want to populate the database with users and dishes, you can execute the file "data_entry.py" located in the folder "script_DB", otherwise you can create users and upload dishes in the app;
-8. To run the application you can use the command: **> flask run -h 0.0.0.0**
-9. Now you can login, but if you don't have an account, you can create it on the registration page. **To simulate university emails you need to register with one of the following emails:**
+7. To run the application you can use the command: **> flask run -h 0.0.0.0**
+8. Now you can login, but if you don't have an account, you can create it on the registration page. **To simulate university emails you need to register with one of the following emails:**
 * **Student: nomeutente @studenti.universita.it**
 * **Admin: nomeutente @personale.universita.it**.
